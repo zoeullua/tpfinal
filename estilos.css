@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Playfair+Display&display=swap');
+
+body, h1, ul, li, nav {
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+    background-color: lightgoldenrodyellow; /* defino color de toda la pagina */
+    font-family: 'Alice', serif;
+}
+
+div {  /* engloba todo el contenido de la pagina */
+    width: 800px;  /* establezco el tamaño de la ventana, texto */
+    max-width: 95%;
+    margin: 0 auto;
+    text-align: center;  /* centro el texto, estableciendo los margenes */
+}
+
+/* titulo */
+h1 {   
+    color:rgb(149, 179, 218);
+    background-color: whitesmoke;
+    height: 70px;
+    text-align: center;
+    padding-top: 35px;
+    font-family: 'Playfair Display', serif;
+    
+}
+
+/* link */
+header a { 
+    text-decoration: none;
+}
+
+.destaco-link {
+    background-color: rgb();
+}
+
+/* menu de navegacion */
+nav {
+    border-top: 2px dotted lightblue;
+    border-bottom: 2px dotted lightblue;
+}
+
+nav li {
+    display: inline-block;
+    padding: 15px;
+    background-color: whitesmoke;
+}
+
+/* cuando le paso por arriba */
+nav li:hover {
+    background-color: rgb(253, 255, 137);
+}
+
+/* imagenes */
+.adaptoimg {  /* foto de portada */
+    width: 100%;
+    height: auto;
+}
+.adaptotodas { /* demas fotos */
+    width: 520px;
+    height: auto;
+}
+
+/* todo el texto */
+article {
+    background-color: whitesmoke;
+    padding: 20px;
+    margin: 5px;
+}
+
+/* lista de canciones */
+ol {  /* ordeno a izq para que no queden los num sueltos */
+    text-align: left;
+}
+
+/* pie de pagina */
+footer {
+    background-color: lightsteelblue;
+    padding: 20px;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* adapto a distintas pantallas */
+@media (max-width: 600px) {
+    nav {
+        text-align: center;
+        padding: 8px;
+    }
+    .adaptotodas {
+        width: 95%;
+    }
+}
