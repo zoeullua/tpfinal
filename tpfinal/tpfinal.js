@@ -1,9 +1,7 @@
 // TPFINAL. Zoe Ullua y Pilar Griffo
 // Comision 3
 // Legajo Zoe: 94705/3
-// Av grafica: La Bella y la Bestia
-// Minijuego: Frogger adaptado a llega a la Bestia
-
+// TPFINAL. Aventura grafica + Minijuego
 
 let aventura
 
