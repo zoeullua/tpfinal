@@ -12,3 +12,4 @@ Logras advertirle a la Bestia y se prepara para el combate con Gastón. La batal
 FINAL BUENO: La bestia vence y gracias a tu cariño y apoyo revela su forma real, un principe. Te invita a vivir en su castillo y son felices.
 FINAL ¿BUENO?: Traicionas a la bestia por la espalda. Te rescataste a ti misma, y al quedar el castillo sin propietario, ahora es tuyo. Pasa a ser tu nuevo y solitario hogar.
 CREDITOS: Aventura y juego programados por: Zoe Ullua y Pilar Griffo. Obra original: La bella y la bestia, escrita por la autora Jeanne-Marie Leprince de Beaumont. Las imagenes utilizadas son de la película de Disney.
+FINAL MALO: No logras llegar con la bestia, la gente del pueblo logra retenerte. Gastón entra al castillo y la Bestia, desprevenida, es derrotada.

@@ -1,7 +1,6 @@
-// TPFINAL. Zoe Ullua y Pilar Griffo
-// Comision 3
-// Legajo Zoe: 94705/3
-// TPFINAL. Aventura grafica + Minijuego
+//Tp final 
+//Zoe Ullua, Pilar Griffo
+//Comisión 3
 
 let aventura
 

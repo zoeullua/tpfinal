@@ -14,7 +14,7 @@ class Boton {
   }
 
   actualizar() {
-    //console.log(this.tiempo);
+    
 
     if (this.tiempo < 60) {
       this.tiempo ++;
@@ -30,7 +30,6 @@ class Boton {
         this.tiempo = 0;
       }
     }
-    
   }
 
   dibujar() {

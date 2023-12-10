@@ -2,7 +2,7 @@ class Juego {
   constructor(){
   this.estado = 1;
   this.iniciodeljuego;
-  this.bella = new Bella(); 
+  this.bella = new Bella(); //
   this.enemigos = new Enemigos();
   this.fotos = new Fotos();
  }
@@ -59,21 +59,19 @@ actualizar(){ // logica de estados
     this.fotos.fondos();
     textAlign(CENTER, CENTER);
     text("¡GANASTE, ESQUIVASTE EL RESCATE! CLICK PARA SEGUIR CON LA AVENTURA ", width/2, height/2);
-
+    aventura.pantalla = 10;
+    aventura.estados();
  
  // estado 4 ____________________________________________________________
-  } else if (this.estado == 4){ // pantalla perdiste
-    background(0);
-    fill(255);
-    textSize(20);
-    textAlign(CENTER, CENTER);
-    this.fotos.fondos();
-    text("PERDISTE :(. CLICK PARA REINICIAR", width/2, height/2);
+  } else if (this.estado == 4){ 
+    aventura.pantalla = 14;// pantalla perdiste
+   
   
   }
 }
   
 keyPressed(){
+  //Logica de estados
   if (this.estado == 2){
     this.bella.keyPressed();
   } else if (this.estado == 3){
@@ -86,10 +84,10 @@ keyPressed(){
      }}
 }
 
-mousePressed(){  // AGREGADO !!
-    console.log("Estado actual:", this.estado);
-
-   if (this.estado === 1 && aventura.pantalla === 14) {
+mousePressed(){  
+    
+//Logica de estados
+   if (this.estado === 1 && aventura.pantalla === 15) {
     this.iniciodeljuego = millis();
     this.bella.posx = 400;
     this.bella.posy = 570;

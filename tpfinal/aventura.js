@@ -2,12 +2,12 @@ class Aventura {
 
   constructor() {
     this.pantalla = 0;
-    this.cant = 14;
+    this.cant = 15;
     this.imagenes = [];
-    
     this.juego = new Juego();  // juego q iria en la pantalla 14
     this.textos = loadStrings("data/textos.txt");
 
+//Ciclo for para cargar las imagenes
     for (this.i = 0; this.i < this.cant; this.i++) {
       this.imagenes[this.i] = loadImage("data/" + this.i + ".jpg", img => {
         img.resize(600, 600);
@@ -15,7 +15,7 @@ class Aventura {
       }
       );
     }
-
+//Creacion de objetos de la clase botón
     this.botonInicio = new Boton (200, 20, 100, 50, 2, "Empezar", 275, this);
     this.botonRescatar = new Boton (30, 350, 130, 50, 4, "Ir a rescatarlo ", 55, this);
     this.botonEsperar = new Boton (350, 350, 130, 50, 3, "Esperar que la policía se encargue", 475, this);
@@ -25,7 +25,7 @@ class Aventura {
     this.botonContinuar2 = new Boton (200, 20, 46, 46, 8, "Continuar", 417, this);
     this.botonContinuar3 = new Boton (200, 20, 46, 46, 9, "Continuar", 417, this);
     this.botonSalir = new Boton (30, 350, 130, 50, 9, "Intentar detenerlos", 55, this);
-    this.botonTrabar = new Boton (350, 350, 130, 50, 14, "Advertir a la bestia", 475, this); // lleva al juego
+    this.botonTrabar = new Boton (350, 350, 130, 50, 15, "Advertir a la bestia", 475, this); // lleva al juego
     this.botonReiniciar = new Boton (200, 20, 130, 50, 0, "Reiniciar", 475, this);//opcion 1
     this.botonObservar = new Boton (30, 350, 130, 50, 11, "Observar la victoria de la bestia", 55, this);
     this.botonTraicionar = new Boton (350, 350, 130, 50, 12, "Traicionar a la bestia", 475, this);
@@ -40,8 +40,6 @@ class Aventura {
   
 // logica de estados
   estados() {
-    console.log(this.pantalla);
-    
     fill(0);
     textSize(20);
     imageMode(CORNER);
@@ -52,7 +50,6 @@ class Aventura {
 
 //pantalla 0 -------------------------------------------------
     if (this.pantalla === 0) {
-
       fill(250);
       this.botonInicio.dibujar();
 
@@ -123,7 +120,6 @@ class Aventura {
 
       fill(250);
       this.botonReiniciar.dibujar();
-      
     }
 // pantalla 10 ---------------------------------------------
     else if (this.pantalla === 10) {
@@ -156,13 +152,25 @@ class Aventura {
       fill(250);
       this.botonReiniciar.dibujar();
     }
-// pantalla 14 ---------------------------------------------
+    // pantalla 14
    else if (this.pantalla === 14) {
+  fill(0);
+      text(this.textos[this.pantalla], 30, 430, 550, 250);
+      fill(250);
+      this.juego.estado = 1;
+      textAlign(LEFT, CORNER);
+      this.botonReiniciar.dibujar();
+      console.log(this.textos, this.pantalla)
+  }
+// pantalla 15 ---------------------------------------------
+   else if (this.pantalla === 15) {
      this.juego.actualizar();
      if (this.juego.estado === 3) {
        this.pantalla = 10;
   }
    }
-  }
+   
+   }
+  
 
 } // fin de aventura
